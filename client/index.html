@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Chat Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/angular.min.js"></script>
+    <link rel="stylesheet" href="stylesheets/main.css"></script>
+    <script type="text/javascript" src="scripts/main.js"></script>
+    </head>
+    <body ng-app="meetupApp">
+      <div class="container" ng-controller="destinationController">
+        <form  ng-Submit="post()">
+          <h4>Country</h4>
+          <input required ng-model="newDestination.country" class="form-control">
+          <h4>City</h4>
+          <input required ng-model="newDestination.city" class="form-control">
+          <h4>Zipcode</h4>
+          <input ng-model="newDestination.zipcode" class="form-control">
+          <h4>StartTime</h4>
+          <input required ng-model="newDestination.start_time" class="form-control">
+          <h4>Duration</h4>
+          <input required ng-model="newDestination.duration" class="form-control">
+          <input class="button" type="submit">
+        </form>
+      
+        <div class="destination-container">
+         <div class='post' ng-repeat="destination in destinations" ng-class-odd="'odd'" ng-class-even="'even'">
+            <div class="country">
+              {{destination.country}}
+            </div>
+              <p>{{destination.city}} | {{destination.zipcode}}</p>
+              <div>
+                {{destination.start_time}}
+                {{destination.duration}}
+              </div>
+            </div>
+        </div>
+      </div>
+    </body>
+</html>
