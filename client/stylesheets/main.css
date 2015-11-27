@@ -1,3 +1,17 @@
+body{
+    background-image:url('https://images.unsplash.com/photo-1446034295857-c39f8844fad4?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=7197c9b122811bb2fb9cdfe7b93690f0');
+    background-size:cover;
+    background-color:#b29f99;
+    background-repeat:no-repeat;
+}
+.jumbotron{
+    background-color:#b13914;
+    color:white;
+}
+form{
+    background-color:#edb568;
+    padding:40px;
+}
 .odd{
     background-color:#ece7ee;
 }

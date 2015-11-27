@@ -14,6 +14,9 @@
     <script type="text/javascript" src="scripts/main.js"></script>
     </head>
     <body ng-app="meetupApp">
+      <div class="jumbotron">
+        <h2 class="text-center">Set up your thanksgiving plans for others to see!</h2>
+      </div>
       <div class="container" ng-controller="destinationController">
         <form  ng-Submit="post()">
           <h4>Name</h4>
@@ -28,7 +31,7 @@
           <input required ng-model="newDestination.start_time" class="form-control">
           <h4>Duration</h4>
           <input required ng-model="newDestination.duration" class="form-control">
-          <input class="button" type="submit">
+          <input class="btn btn-large btn-danger" type="submit">
         </form>
       
         <div class="destination-container">
