@@ -16,6 +16,8 @@
     <body ng-app="meetupApp">
       <div class="container" ng-controller="destinationController">
         <form  ng-Submit="post()">
+          <h4>Name</h4>
+          <input required ng-model="newDestination.name" class="form-control">
           <h4>Country</h4>
           <input required ng-model="newDestination.country" class="form-control">
           <h4>City</h4>
@@ -31,13 +33,14 @@
       
         <div class="destination-container">
          <div class='post' ng-repeat="destination in destinations" ng-class-odd="'odd'" ng-class-even="'even'">
+            <h3>{{destination.name}}</h3>
             <div class="country">
               {{destination.country}}
             </div>
               <p>{{destination.city}} | {{destination.zipcode}}</p>
               <div>
-                {{destination.start_time}}
-                {{destination.duration}}
+                <p>Start: {{destination.start_time}}</p>
+                <p>Duration: {{destination.duration}}</p>
               </div>
             </div>
         </div>
